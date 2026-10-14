@@ -30,9 +30,26 @@ html {
 }
 
 #wheelbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     box-sizing: border-box;
     border-radius: 999px;
     border: 1.5px solid var(--secondary-color);
     height: inherit;
     aspect-ratio: 1 / 1;
+}
+
+#wheel {
+    border: none;
+    background-color: inherit;
+    font-family: 'Quicksand', 'Nunito', 'Rounded Mplus 1c', sans-serif;
+    color: darkslategrey;
+    font-style: bold;
+    font-size: 60px;
+    transition: transform 1s ease 0s;
+}
+
+#wheel:hover {
+    transform: rotateZ(1turn);
 }
