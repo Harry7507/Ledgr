@@ -1,6 +1,7 @@
 :root {
     --primary-color : greenyellow;
-    --secondary-color : white;
+    --secondary-color : purple;
+    --inputbar-size: 65px;
 }
 
 html {
@@ -11,11 +12,27 @@ html {
     display: flex;
     align-items: center;
     height: 65px;
-    margin: 25px auto 0;
+    margin: 30px auto 0 auto;
 }
 
 #title {
-    padding-left: 25px;
+    padding-left: 30px;
     font-size: 50px;
     color: var(--primary-color);
+}
+
+#inputbar {
+    margin: 90px auto 0 auto;
+    height: var(--inputbar-size);
+    width: 85vw;
+    border-radius: 999px;
+    background-color: darkgray;
+}
+
+#wheelbox {
+    box-sizing: border-box;
+    border-radius: 999px;
+    border: 1.5px solid var(--secondary-color);
+    height: inherit;
+    aspect-ratio: 1 / 1;
 }
