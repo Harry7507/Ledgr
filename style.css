@@ -1,10 +1,10 @@
 :root {
-    --primary-color : #00ffe1;
-    --secondary-color : #c8ff00;
+    --primary-color : greenyellow;
+    --secondary-color : white;
 }
 
 html {
-    background-color: #5c5b5b;
+    background-color: #1e1e1e;
 }
 
 #navbar {
