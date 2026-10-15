@@ -1,6 +1,6 @@
 :root {
     --primary-color : greenyellow;
-    --secondary-color : purple;
+    --secondary-color : indigo;
     --inputbar-size: 65px;
 }
 
@@ -44,12 +44,12 @@ html {
     border: none;
     background-color: inherit;
     font-family: 'Quicksand', 'Nunito', 'Rounded Mplus 1c', sans-serif;
-    color: darkslategrey;
+    color: darkcyan;
     font-weight: bolder;
     font-size: 60px;
     transition: transform 1s ease;
 }
 
-#wheel: {
+#wheel:hover {
     transform: rotateZ(1turn);
 }
