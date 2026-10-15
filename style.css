@@ -50,6 +50,6 @@ html {
     transition: transform 1s ease;
 }
 
-#wheel:hover {
-    transform: rotateZ(1turn);
+#wheel.is-clicked {
+    transform: rotate(1turn);
 }
