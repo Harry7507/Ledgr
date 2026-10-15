@@ -45,7 +45,7 @@ html {
     background-color: inherit;
     font-family: 'Quicksand', 'Nunito', 'Rounded Mplus 1c', sans-serif;
     color: darkslategrey;
-    font-style: bold;
+    font-weight: bolder;
     font-size: 60px;
     transition: transform 1s ease 0s;
 }
