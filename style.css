@@ -38,6 +38,12 @@ html {
     border: 1.5px solid var(--secondary-color);
     height: inherit;
     aspect-ratio: 1 / 1;
+    transition: all 0.5s ease;
+}
+
+#wheelbox:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 1.5px black 
 }
 
 #wheel {
