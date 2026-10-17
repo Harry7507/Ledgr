@@ -31,15 +31,16 @@ html {
 }
 
 #addButton {
+    cursor: pointer;
     height: 100%;
     aspect-ratio: 1 / 1 ;
     border-radius: 999px;
     border: none;
     background-color: darkgrey;
-    color: darkcyan;
-    font-weight: bolder;
-    font-size: 60px;
     transition: transform 1s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #addButton.is-clicked {
