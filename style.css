@@ -1,7 +1,7 @@
 :root {
     --primary-color : greenyellow;
     --secondary-color : indigo;
-    --inputbar-size: 65px;
+    --inputbox-size: 65px;
 }
 
 html {
@@ -21,41 +21,27 @@ html {
     color: var(--primary-color);
 }
 
-#inputbar {
+#inputbox {
     margin: 90px auto 0;
-    height: var(--inputbar-size);
+    height: var(--inputbox-size);
     width: 85vw;
-    border-radius: 999px;
-    background-color: darkgray;
-}
-
-#wheelbox {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-sizing: border-box;
+}
+
+#addButton {
+    height: 100%;
+    aspect-ratio: 1 / 1 ;
     border-radius: 999px;
-    border: 1.5px solid var(--secondary-color);
-    height: inherit;
-    aspect-ratio: 1 / 1;
-    transition: all 0.5s ease;
-}
-
-#wheelbox:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 1.5px black 
-}
-
-#wheel {
     border: none;
-    background-color: inherit;
-    font-family: 'Quicksand', 'Nunito', 'Rounded Mplus 1c', sans-serif;
+    background-color: darkgrey;
     color: darkcyan;
     font-weight: bolder;
     font-size: 60px;
     transition: transform 1s ease;
 }
 
-#wheel.is-clicked {
+#addButton.is-clicked {
     transform: rotate(1turn);
 }
