@@ -15,9 +15,15 @@ html {
     margin: 30px auto 0;
 }
 
-#title {
+#logo {
     padding-left: 30px;
-    font-size: 62px;
+    height: 100%;
+    aspect-ratio: 1 / 1 ;
+}
+
+#title {
+    font-style: oblique;
+    font-size:66px;
     color: var(--primary-color);
 }
 
