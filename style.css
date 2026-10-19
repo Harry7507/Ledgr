@@ -49,7 +49,10 @@ header{
     justify-content: center;
 }
 
-#addButton {
+#add-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     height: 100%;
     aspect-ratio: 1 / 1 ;
@@ -57,11 +60,8 @@ header{
     border: none;
     background-color: var(--lighter-color);
     transition: transform 1s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-#addButton.is-clicked {
+#add-button.is-clicked {
     transform: rotate(1turn);
 }
