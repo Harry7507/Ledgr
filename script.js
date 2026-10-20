@@ -1,5 +1,5 @@
 const btn = document.getElementById('add-button');
 
 btn.addEventListener('click', function() {
-    this.classList.add('is-clicked');
+    btn.style.transform = "rotate(1turn)";
 });
