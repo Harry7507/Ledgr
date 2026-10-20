@@ -65,3 +65,11 @@ header{
 #add-button.is-clicked {
     transform: rotate(1turn);
 }
+
+#container {
+    display: grid;
+
+    height: 70vh;
+    width: 90vw;
+    margin: 4vw auto;
+}
