@@ -46,7 +46,14 @@ header{
     width: 75vw;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
+}
+
+.tagline {
+    color: var(--lighter-color);
+    font-size: 2rem;
+    padding-left: 1.5vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #add-button {
