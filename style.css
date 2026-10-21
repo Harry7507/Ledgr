@@ -22,16 +22,16 @@ header{
 #navbar {
     display: flex;
     align-items: center;
-    justify-content: right;
+    justify-content: flex-end;
+    column-gap: 36px;
     height: 65px;
     width: 100%;
 }
 
 .nav-link {
-    margin: 20px 20px;
     color: var(--lighter-color);
     text-decoration: none;
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'Space Grotesk', sans-serif,;
     font-size: 1.5rem;
     font-variant: small-caps;
     transition: all 0.5s ease;
@@ -48,12 +48,12 @@ header{
     width: 50vw;
     display: flex;
     align-items: center;
-    justify-content: left;
+    justify-content: flex-start;
 }
 
 .tagline {
     font-size: 2.5rem;
-    padding-left: 2vw;
+    margin-left: 2vw;
     font-family: 'Space Grotesk', sans-serif;
     background: linear-gradient(to right, var(--primary-color), var(--tertiary-color), var(--secondary-color), var(--tertiary-color), var(--secondary-color),var(--primary-color));
     background-clip: text;
