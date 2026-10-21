@@ -30,6 +30,7 @@ header{
     margin: 20px 20px;
     color: var(--lighter-color);
     text-decoration: none;
+    font-family: 'Space Grotesk', sans-serif;
     font-size: 1.5rem;
     font-variant: small-caps;
     transition: all 0.5s ease;
@@ -51,9 +52,9 @@ header{
 
 .tagline {
     color: var(--lighter-color);
-    font-size: 2rem;
+    font-size: 3rem;
     padding-left: 1.5vw;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
 }
 
 #add-button {
