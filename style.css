@@ -99,10 +99,12 @@ header{
 
 #container {
     display: grid;
-    height: 70vh;
+    min-height: 70vh;
     width: 90vw;
     margin: 7vw auto;
-    gap: 1em;
+    gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);;
+    grid-template-rows: repeat(3, minmax(140px, 1fr));
     grid-template-areas: 
     "box1 box4 box5 box7"
     "box2 box4 box5 box7"
@@ -112,4 +114,9 @@ header{
 .box {
     border-radius: 10px;
     background-color: var(--secondary-color);
+    transition: transform 0.5s ease;
+}
+
+.box:hover {
+    transform: scale(1.02);
 }
