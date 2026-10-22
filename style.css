@@ -1,9 +1,9 @@
 :root {
-    --primary-color : greenyellow;
+    --primary-color : yellowgreen;
     --secondary-color : darkcyan;
     --tertiary-color : violet;
     --lighter-color : darkgrey;
-    --inputbox-size: 65px;
+    --inputbox-size: 70px;
 }
 
 html {
@@ -31,7 +31,7 @@ header{
 .nav-link {
     color: var(--lighter-color);
     text-decoration: none;
-    font-family: 'Space Grotesk', sans-serif,;
+    font-family: 'Space Grotesk', sans-serif;
     font-size: 1.5rem;
     font-variant: small-caps;
     transition: all 0.5s ease;
@@ -78,14 +78,23 @@ header{
     aspect-ratio: 1 / 1 ;
     border-radius: 999px;
     border: none;
-    background-color: var(--lighter-color);
-    transition: transform 1s ease;
+    background-color: var(--primary-color);
+    transition: transform 0.8s ease, box-shadow 0.3s ease;
 }
 
 #add-button svg { stroke: #1d1d1d; }
 
+#add-button:hover {
+    box-shadow: 0 0 24px rgba(173, 255, 47, 0.45);
+}
+
+#add-button:focus-visible {
+    outline: 2px solid var(--tertiary-color);
+    outline-offset: 3px;
+}
+
 #add-button.is-clicked {
-    transform: rotate(1turn);
+    transform: rotate(225deg);
 }
 
 #container {
