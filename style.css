@@ -28,6 +28,15 @@ header{
     height: 5rem;
 }
 
+@media (max-width: 480px) {
+    header {
+        margin: 10px 10px 0;
+    }
+    #logo {
+        height: 3.5rem;
+    }
+}
+
 #navbar {
     display: flex;
     align-items: center;
@@ -106,6 +115,27 @@ header{
     transform: rotate(225deg);
 }
 
+@media (max-width: 480px) {
+    #navbar {
+        column-gap: 15px;
+    }
+    .nav-link {
+        font-size: 1rem;
+    }
+    #inputbox {
+        margin: 8vh auto;
+        height: calc(var(--inputbox-size) - 40px);
+        width:80vw;
+    }
+    #add-button svg {
+        height: 20px;
+        width: 20px;
+    }
+    .tagline {
+        font-size: 1.5rem;
+    }
+}
+
 #container {
     display: grid;
     min-height: 70vh;
@@ -118,6 +148,20 @@ header{
     "box1 box4 box5 box7"
     "box2 box4 box5 box7"
     "box3 box6 box6 box7";
+}
+
+@media (max-width: 768px) {
+    #container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: none;
+        grid-auto-rows: minmax(140px, auto);
+        grid-template-areas: 
+        "box1" "box1"
+        "box4" "box5"
+        "box6" "box6"
+        "box7" "box7"
+        "box2" "box3";
+    }
 }
 
 .box {
