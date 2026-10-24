@@ -1,5 +1,7 @@
 const btn = document.getElementById('add-button');
+const txt = document.getElementById('tagline');
 
 btn.addEventListener('click', function() {
-    this.classList.toggle('is-clicked');
+    btn.classList.toggle('is-clicked');
+    txt.classList.toggle('will-hide');
 });

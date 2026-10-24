@@ -69,7 +69,7 @@ header{
     justify-content: flex-start;
 }
 
-.tagline {
+#tagline {
     font-size: 2.5rem;
     margin-left: 1.8vw;
     font-family: 'Space Grotesk', sans-serif;
@@ -79,12 +79,18 @@ header{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: text-grad 7s linear infinite;
+    transition: all 0.8s ease;
 }
 
 @keyframes text-grad {
     to {
         background-position: 200%;
     }
+}
+
+#tagline.will-hide {
+    transform: translateX(250px);
+    opacity: 0;
 }
 
 #add-button {
@@ -131,7 +137,7 @@ header{
         height: 20px;
         width: 20px;
     }
-    .tagline {
+    #tagline {
         font-size: 1.5rem;
     }
 }
