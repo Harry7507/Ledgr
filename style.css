@@ -61,39 +61,37 @@ header{
     transform: translateY(-2px);
 }
 
-#inputbox {
-    margin: 18vh auto;
-    height: var(--inputbox-size);
-    width: 50vw;
+#input-area {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    margin: 14vh auto 18vh;
+    width: 50vw;
 }
 
 #tagline {
-    font-size: 2.5rem;
-    margin-left: 1.8vw;
+    overflow: hidden;
+    text-align: right;
     font-family: 'Space Grotesk', sans-serif;
-    background: linear-gradient(to right, var(--primary-color), var(--tertiary-color), var(--secondary-color), var(--tertiary-color), var(--secondary-color),var(--primary-color));
-    background-clip: text;
-    background-size: 200%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: text-grad 7s linear infinite;
-    transition: all var(--button-speed) ease;
+    color: var(--lighter-color);
+    font-size: 2.5rem;
 }
 
-@keyframes text-grad {
-    to {
-        background-position: 200%;
-    }
-}
-
-#tagline.will-hide {
-    transform: translateX(250px);
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
+#inputbox {
+    padding:2.5px;
+    height: var(--inputbox-size);
+    width: 100%;
+    border: 2px solid transparent;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-image: 
+        linear-gradient(var(--darker-color),var(--darker-color)),
+        linear-gradient(45deg, var(--secondary-color),var(--tertiary-color), var(--primary-color),var(--secondary-color),var(--primary-color),var(--tertiary-color));
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
 }
 
 #add-button {
@@ -112,7 +110,7 @@ header{
 #add-button svg { stroke: var(--darker-color); }
 
 #add-button:hover {
-    box-shadow: 0 0 24px rgba(173, 255, 47, 0.45);
+    box-shadow: 0 0 18px rgba(173, 255, 47, 0.45);
 }
 
 #add-button:focus-visible {
@@ -141,7 +139,7 @@ header{
         width: 20px;
     }
     #tagline {
-        font-size: 1.5rem;
+        font-size: 1.75rem;
     }
 }
 
