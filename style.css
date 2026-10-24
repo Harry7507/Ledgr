@@ -66,7 +66,7 @@ header{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin: 18vh auto 24vh;
+    margin: 18vh auto 32vh;
     width: 50vw;
 }
 
@@ -89,7 +89,7 @@ header{
     justify-content: flex-start;
     background-image: 
         linear-gradient(var(--darker-color),var(--darker-color)),
-        linear-gradient(45deg, var(--secondary-color),var(--tertiary-color), var(--primary-color),var(--secondary-color),var(--primary-color),var(--tertiary-color));
+        linear-gradient(45deg, var(--secondary-color),var(--tertiary-color), var(--primary-color));
     background-origin: border-box;
     background-clip: padding-box, border-box;
 }
