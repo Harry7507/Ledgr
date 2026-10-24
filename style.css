@@ -92,6 +92,8 @@ header{
 #tagline.will-hide {
     transform: translateX(250px);
     opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 }
 
 #add-button {
