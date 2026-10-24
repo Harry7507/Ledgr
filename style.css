@@ -5,6 +5,7 @@
     --lighter-color : darkgrey;
     --darker-color : #1d1d1d;
     --inputbox-size: 70px;
+    --button-speed: 0.8s;
 }
 
 #box1 { grid-area: box1;}
@@ -79,7 +80,7 @@ header{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: text-grad 7s linear infinite;
-    transition: all 0.8s ease;
+    transition: all var(--button-speed) ease;
 }
 
 @keyframes text-grad {
@@ -103,7 +104,7 @@ header{
     border-radius: 999px;
     border: none;
     background-color: var(--primary-color);
-    transition: transform 0.8s ease, box-shadow 0.3s ease;
+    transition: transform var(--button-speed) ease, box-shadow 0.3s ease;
 }
 
 #add-button svg { stroke: var(--darker-color); }
