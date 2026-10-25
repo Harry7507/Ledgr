@@ -122,6 +122,14 @@ header{
     transform: rotate(225deg);
 }
 
+.options {
+    border: none;
+    background-color: var(--lighter-color);
+    height: 100%;
+    width: calc((50vw - var(--inputbox-size)) / 2);
+    border-radius: 999px;
+}
+
 @media (max-width: 480px) {
     #navbar {
         column-gap: 15px;
