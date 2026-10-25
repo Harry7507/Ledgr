@@ -4,7 +4,8 @@
     --tertiary-color : violet;
     --lighter-color : darkgrey;
     --darker-color : #1d1d1d;
-    --inputbox-size: 70px;
+    --input-height: 70px;
+    --input-width: 50vw;
     --button-speed: 0.8s;
 }
 
@@ -67,7 +68,7 @@ header{
     justify-content: center;
     flex-direction: column;
     margin: 18vh auto 32vh;
-    width: 50vw;
+    width: var(--input-width);
 }
 
 #tagline {
@@ -80,7 +81,7 @@ header{
 
 #inputbox {
     padding:2.5px;
-    height: var(--inputbox-size);
+    height: var(--input-height);
     width: 100%;
     border: 2px solid transparent;
     border-radius: 999px;
@@ -126,7 +127,7 @@ header{
     border: none;
     background-color: var(--lighter-color);
     height: 100%;
-    width: calc((50vw - var(--inputbox-size)) / 2);
+    width: calc((var(--input-width) - var(--input-height)) / 2);
     border-radius: 999px;
 }
 
@@ -142,14 +143,17 @@ header{
         margin: 4vh auto 8vh;
     }
     #inputbox {
-        height: calc(var(--inputbox-size) - 40px);
+        height: 30px;
+    }
+    #tagline {
+        font-size: 1.75rem;
     }
     #add-button svg {
         height: 20px;
         width: 20px;
     }
-    #tagline {
-        font-size: 1.75rem;
+    .options {
+        width: calc((80vw - 30px) / 2);
     }
 }
 
