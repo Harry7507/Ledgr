@@ -127,8 +127,24 @@ header{
     border: none;
     background-color: var(--lighter-color);
     height: 100%;
-    width: calc((var(--input-width) - var(--input-height)) / 2);
     border-radius: 999px;
+    transform: translateX(-50px);
+    opacity: 0;
+    visibility: hidden;
+    transition: width var(--button-speed) ease, transform var(--button-speed) ease, opacity var(--button-speed) ease;
+}
+
+#curr.will-appear {
+    transform: translateX(0);
+    opacity: 1;
+    width: calc(100% / 2);
+    visibility: visible;
+}
+#prev.will-appear {
+    transform: translateX(0);
+    opacity: 1;
+    width: calc(100% / 2);
+    visibility: visible;
 }
 
 @media (max-width: 480px) {
@@ -153,7 +169,7 @@ header{
         width: 20px;
     }
     .options {
-        width: calc((80vw - 30px) / 2);
+        width: calc(100% / 2);
     }
 }
 
