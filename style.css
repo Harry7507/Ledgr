@@ -51,7 +51,7 @@ header{
 .nav-link {
     color: var(--lighter-color);
     text-decoration: none;
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.5rem;
     font-variant: small-caps;
     transition: all 0.5s ease;
@@ -74,9 +74,9 @@ header{
 #tagline {
     overflow: hidden;
     text-align: right;
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: var(--lighter-color);
-    font-size: 2.5rem;
+    font-size: 2.7rem;
 }
 
 #inputbox {
@@ -124,6 +124,8 @@ header{
 }
 
 .options {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
     border: none;
     background-color: var(--lighter-color);
     height: 100%;
