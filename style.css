@@ -127,23 +127,18 @@ header{
     border: none;
     background-color: var(--lighter-color);
     height: 100%;
+    width: calc(100% / 2);
     border-radius: 999px;
-    transform: translateX(-50px);
+    transform: translateX(-85px);
     opacity: 0;
     visibility: hidden;
-    transition: width var(--button-speed) ease, transform var(--button-speed) ease, opacity var(--button-speed) ease;
+    transition: all var(--button-speed) ease;
 }
 
-#curr.will-appear {
-    transform: translateX(0);
-    opacity: 1;
-    width: calc(100% / 2);
-    visibility: visible;
-}
+#curr.will-appear,
 #prev.will-appear {
     transform: translateX(0);
     opacity: 1;
-    width: calc(100% / 2);
     visibility: visible;
 }
 
