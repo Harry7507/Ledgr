@@ -1,7 +1,6 @@
 const btn = document.getElementById('add-button');
-const options = document.getElementsByClassName('options');
-const curr = options[0];
-const prev = options[1];
+const curr = document.getElementById('curr');
+const prev = document.getElementById('prev');
 
 btn.addEventListener('click', function() {
     btn.classList.toggle('is-clicked');
