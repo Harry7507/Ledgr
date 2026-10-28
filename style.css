@@ -209,7 +209,7 @@ header{
 
 .box {
     border-radius: 10px;
-    background-color: var(--secondary-color);
+    background-color: color-mix(in srgb, var(--lighter-color) 25%, var(--darker-color) 75%);
     transition: transform 0.5s ease;
 }
 
