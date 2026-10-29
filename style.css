@@ -3,7 +3,7 @@
     --secondary-color : darkcyan;
     --tertiary-color : violet;
     --lighter-color : darkgrey;
-    --darker-color : #1d1d1d;
+    --darker-color : #151515;
     --input-height: 70px;
     --input-width: 50vw;
     --button-speed: 0.7s;
@@ -210,7 +210,7 @@ header{
 .box {
     border-radius: 10px;
     background-color: color-mix(in srgb, var(--lighter-color) 20%, var(--darker-color) 80%);
-    transition: transform 0.5s ease;
+    transition: all 0.5s ease;
 }
 
 .box:hover {
