@@ -14,36 +14,42 @@
     <header>
         <div id="logo1" class="logo">LED</div>
         <div id="logo2" class="logo">Gr</div>
+        <button id="nav-btn">
+            <img id="burger-img" src="assets/burger-menu.svg" alt="Nav-Menu">
+        </button> 
         <nav id="navbar">
             <ul>
                 <li><a href="index.html" class="nav-link">home</a></li>
                 <li><a href="history.html" class="nav-link">history</a></li>
                 <li><a href="people.html" class="nav-link">people</a></li>
             </ul>
-        </nav> 
+        </nav>
     </header>
-    <div id="input-area">
-        <div id="tagline">Got a New Transaction?</div>
-        <div id="inputbox">
-            <button id="add-button" aria-label="Add Transaction">
-                <svg viewBox="0 0 24 24" width="50" height="50" stroke-width="3.5" fill="none" stroke-linecap="round">
-                    <line x1="12" y1="5" x2="12" y2="19"></line>
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                </svg>
-            </button>
-            <button class="options" id="curr">Current</button>
-            <button class="options" id="prev">Previous</button>
+    <div id="overlay"></div>
+    <main>
+        <div id="input-area">
+            <div id="tagline">Got a New Transaction?</div>
+            <div id="inputbox">
+                <button id="add-button" aria-label="Add Transaction">
+                    <svg viewBox="0 0 24 24" width="50" height="50" stroke-width="3.5" fill="none" stroke-linecap="round">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                </button>
+                <button class="options" id="curr">Current</button>
+                <button class="options" id="prev">Previous</button>
+            </div>
         </div>
-    </div>
-    <div id="container">
-        <div class="box" id="box1"></div>
-        <div class="box" id="box2"></div>
-        <div class="box" id="box3"></div>
-        <div class="box" id="box4"></div>
-        <div class="box" id="box5"></div>
-        <div class="box" id="box6"></div>
-        <div class="box" id="box7"></div>
-    </div>
+        <div id="container">
+            <div class="box" id="box1"></div>
+            <div class="box" id="box2"></div>
+            <div class="box" id="box3"></div>
+            <div class="box" id="box4"></div>
+            <div class="box" id="box5"></div>
+            <div class="box" id="box6"></div>
+            <div class="box" id="box7"></div>
+        </div>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>
