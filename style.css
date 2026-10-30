@@ -23,7 +23,8 @@ html {
 
 header{
     display: flex;
-    margin: 25px 25px 0;
+    align-items: center;
+    margin: 15px 20px 0;
 }
 
 #logo1 {
@@ -66,6 +67,29 @@ ul {
 .nav-link:hover {
     color: var(--tertiary-color);
     transform: translateY(-2px);
+}
+
+@media (max-width: 636px) {
+    #navbar {
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: min(35vw, 100%);
+        background-color: var(--darker-color);
+        z-index: 10;
+        border-left: 1px solid var(--primary-color)
+    }
+    ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .nav-link {
+        font-size: 1.7rem;
+        transition: color 0.5s ease;
+    }
 }
 
 #input-area {
@@ -158,11 +182,8 @@ ul {
     .logo {
         font-size: 3rem;
     }
-    #navbar {
-        column-gap: 15px;
-    }
     .nav-link {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
     #input-area {
         width: 80vw;
