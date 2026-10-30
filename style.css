@@ -44,9 +44,14 @@ header{
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    column-gap: 36px;
     height: 65px;
     width: 100%;
+}
+
+ul {
+    display: flex;
+    column-gap: 36px;
+    list-style: none;
 }
 
 .nav-link {
