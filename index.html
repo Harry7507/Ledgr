@@ -12,11 +12,13 @@
 </head>
 <body>
     <header>
-        <div id="logo1" class="logo">LED</div>
-        <div id="logo2" class="logo">Gr</div>
-        <button id="nav-btn">
-            <img id="burger-img" src="assets/burger-menu.svg" alt="Nav-Menu">
-        </button> 
+        <div aria-label="Ledgr-logo" style="display: flex;">
+            <div id="logo1" class="logo">LED</div>
+            <div id="logo2" class="logo">Gr</div>
+        </div>
+        <button id="nav-btn" aria-expanded="false" aria-controls="navbar">
+            <img id="burger-img" src="assets/burger-menu.svg" alt="">
+        </button>
         <nav id="navbar">
             <ul>
                 <li><a href="index.html" class="nav-link">home</a></li>
@@ -25,12 +27,12 @@
             </ul>
         </nav>
     </header>
-    <div id="overlay"></div>
+    <div id="overlay" aria-hidden="true"></div>
     <main>
         <div id="input-area">
             <div id="tagline">Got a New Transaction?</div>
             <div id="inputbox">
-                <button id="add-button" aria-label="Add Transaction">
+                <button id="add-button" aria-label="Add new transaction button" aria-expanded="false" aria-controls="curr prev">
                     <svg viewBox="0 0 24 24" width="50" height="50" stroke-width="3.5" fill="none" stroke-linecap="round">
                         <line x1="12" y1="5" x2="12" y2="19"></line>
                         <line x1="5" y1="12" x2="19" y2="12"></line>
