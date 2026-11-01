@@ -56,12 +56,30 @@ ul {
 }
 
 .nav-link {
+    position: relative;
     color: var(--lighter-color);
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.5rem;
     font-variant: small-caps;
     transition: all 0.5s ease;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to right, var(--tertiary-color), var(--secondary-color), var(--tertiary-color));
+    height: 1px;
+    width: 100%;
+    border-radius: 50px;
+    scale: 0;
+    transition: scale 0.5s ease;
+}
+
+.nav-link:hover::after {
+    scale: 1;
 }
 
 .nav-link:hover {
