@@ -103,9 +103,11 @@ ul {
         background-color: var(--darker-color);
         z-index: 10;
         border-left: 1px solid var(--primary-color);
-        transition: right 0.5s ease;
+        visibility: hidden;
+        transition: right 0.5s ease, visibility 0.5s;
     }
     #navbar.open {
+        visibility: visible;
         right: 0;
     }
     #overlay.show {
