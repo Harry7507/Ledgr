@@ -18,10 +18,12 @@ navBtn.addEventListener('click', function() {
     navbar.classList.add('open');
     overlay.classList.add('show');
     navBtn.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = "hidden";
 });
 
 overlay.addEventListener('click', function () {
     overlay.classList.remove('show');
     navbar.classList.remove('open');
     navBtn.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = "visible";
 });
