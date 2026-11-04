@@ -29,6 +29,7 @@ header{
 
 #Home {
     display: flex;
+    text-decoration: none;
 }
 
 #logo1 {
