@@ -97,18 +97,19 @@ ul {
         justify-content: flex-start;
         position: fixed;
         top: 0;
-        right: -100%;
+        right: 0;
         height: 100vh;
         width: min(35vw, 100%);
         background-color: var(--darker-color);
         z-index: 10;
         border-left: 1px solid var(--primary-color);
         visibility: hidden;
-        transition: right 0.5s ease, visibility 0.5s;
+        transform: translateX(100%);
+        transition: transform 0.5s ease, visibility 0.5s;
     }
     #navbar.open {
         visibility: visible;
-        right: 0;
+        transform: translateX(0);
     }
     #overlay.show {
         display: block;
