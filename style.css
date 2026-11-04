@@ -27,6 +27,10 @@ header{
     margin: 15px 20px 0;
 }
 
+#Home {
+    display: flex;
+}
+
 #logo1 {
     color: var(--lighter-color);
 }
