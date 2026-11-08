@@ -162,7 +162,11 @@ ul {
 }
 
 .inputs {
+    font-family: 'Montserrat', sans-serif;
+    padding: 15px;
+    border: none;
     box-sizing: border-box;
+    border-radius: 999px;
     height: 100%;
     border-radius: 999px;
 }
