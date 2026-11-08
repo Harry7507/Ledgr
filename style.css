@@ -158,11 +158,15 @@ ul {
 }
 
 #main-form {
+    display: flex;
     height: 100%;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .inputs {
     font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
     padding: 15px;
     border: none;
     box-sizing: border-box;
