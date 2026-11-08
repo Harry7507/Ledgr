@@ -5,7 +5,7 @@
     --lighter-color : darkgrey;
     --darker-color : #151515;
     --input-height: 70px;
-    --input-width: 50vw;
+    --input-width: 60vw;
     --button-speed: 0.7s;
 }
 
@@ -110,7 +110,7 @@ ul {
     text-align: right;
     font-family: 'Montserrat', sans-serif;
     color: var(--lighter-color);
-    font-size: 2.7rem;
+    font-size: 3rem;
 }
 
 #inputbox {
@@ -160,16 +160,43 @@ ul {
 #main-form {
     display: flex;
     height: 100%;
+    flex: 1;
+    min-width: 0;
 }
 
 .inputs {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
-    padding: 25px;
+    font-size: 1.2rem;
+    padding: 10px;
     border: none;
     box-sizing: border-box;
     border-radius: 999px;
     height: 100%;
+    min-width: 0;
+}
+
+.inputs:focus {
+    outline: none;
+}
+
+#amount {
+    padding-left: 25px;
+    flex: 1.2;
+}
+
+#category {
+    padding-left: 25px;
+    flex: 1.8;
+}
+
+#date {
+    padding-left: 25px;
+    flex: 1;
+}
+
+#log-btn {
+    height: 100%;
+    aspect-ratio: 1 / 1;
 }
 
 @media (max-width: 480px) {
