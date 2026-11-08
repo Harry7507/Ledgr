@@ -160,19 +160,16 @@ ul {
 #main-form {
     display: flex;
     height: 100%;
-    width: 100%;
-    box-sizing: border-box;
 }
 
 .inputs {
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
-    padding: 15px;
+    padding: 25px;
     border: none;
     box-sizing: border-box;
     border-radius: 999px;
     height: 100%;
-    border-radius: 999px;
 }
 
 @media (max-width: 480px) {
