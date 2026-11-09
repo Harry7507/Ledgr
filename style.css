@@ -6,7 +6,7 @@
     --darker-color : #151515;
     --input-height: 70px;
     --input-width: 60vw;
-    --button-speed: 0.7s;
+    --button-speed: 0.8s;
 }
 
 #box1 { grid-area: box1;}
@@ -117,6 +117,7 @@ ul {
     padding:2.5px;
     height: var(--input-height);
     width: 100%;
+    overflow: hidden;
     border: 2px solid transparent;
     border-radius: 999px;
     display: flex;
@@ -138,6 +139,7 @@ ul {
     aspect-ratio: 1 / 1 ;
     border-radius: 999px;
     border: none;
+    z-index: 5;
     background-color: var(--primary-color);
     transition: transform var(--button-speed) ease, box-shadow 0.3s ease;
 }
@@ -158,10 +160,23 @@ ul {
 }
 
 #main-form {
+    z-index: 4;
     display: flex;
     height: 100%;
+    max-width: 80px;
     flex: 1;
     min-width: 0;
+    transform: translateX(-90%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--button-speed) ease;
+}
+
+#main-form.appears {
+    max-width: 100%;
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
 }
 
 .inputs {
@@ -173,9 +188,6 @@ ul {
     border-radius: 999px;
     height: 100%;
     min-width: 0;
-    opacity: 0;
-    visibility: hidden;
-    transition: all var(--button-speed) ease;
 }
 
 .inputs:focus {
@@ -183,47 +195,23 @@ ul {
 }
 
 #amount {
-    transform: translateX(-30%);
     padding-left: 25px;
     flex: 1.2;
 }
-#amount.appears {
-    transform: translateX(0);
-    visibility: visible;
-    opacity: 1;
-}
 
 #category {
-    transform: translateX(-60%);
     padding-left: 25px;
     flex: 1.8;
 }
-#category.appears {
-    transform: translateX(0);
-    visibility: visible;
-    opacity: 1;
-}
 
 #date {
-    transform: translateX(-150%);
     padding-left: 25px;
     flex: 1;
 }
-#date.appears {
-    transform: translateX(0);
-    visibility: visible;
-    opacity: 1;
-}
 
 #log-btn {
-    transform: translateX(-550%);
     height: 100%;
     aspect-ratio: 1 / 1;
-}
-#log-btn.appears {
-    transform: translateX(0);
-    visibility: visible;
-    opacity: 1;
 }
 
 @media (max-width: 480px) {
