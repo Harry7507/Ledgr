@@ -166,10 +166,14 @@ ul {
     max-width: 80px;
     flex: 1;
     min-width: 0;
-    transform: translateX(-90%);
+    transform: translateX(-85%);
     opacity: 0;
     visibility: hidden;
-    transition: all var(--button-speed) ease;
+    transition: 
+        max-width var(--button-speed) ease 0.5s,
+        transform var(--button-speed) ease 0.5s,
+        opacity var(--button-speed)ease,
+        visibility var(--button-speed) ease;
 }
 
 #main-form.appears {
