@@ -162,16 +162,6 @@ ul {
     height: 100%;
     flex: 1;
     min-width: 0;
-    transform: translateX(-10%);
-    opacity: 0;
-    visibility: hidden;
-    transition: all var(--button-speed) ease;
-}
-
-#main-form.appears {
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(0);
 }
 
 .inputs {
@@ -183,6 +173,9 @@ ul {
     border-radius: 999px;
     height: 100%;
     min-width: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--button-speed) ease;
 }
 
 .inputs:focus {
@@ -190,23 +183,47 @@ ul {
 }
 
 #amount {
+    transform: translateX(-30%);
     padding-left: 25px;
     flex: 1.2;
 }
+#amount.appears {
+    transform: translateX(0);
+    visibility: visible;
+    opacity: 1;
+}
 
 #category {
+    transform: translateX(-60%);
     padding-left: 25px;
     flex: 1.8;
 }
+#category.appears {
+    transform: translateX(0);
+    visibility: visible;
+    opacity: 1;
+}
 
 #date {
+    transform: translateX(-150%);
     padding-left: 25px;
     flex: 1;
 }
+#date.appears {
+    transform: translateX(0);
+    visibility: visible;
+    opacity: 1;
+}
 
 #log-btn {
+    transform: translateX(-550%);
     height: 100%;
     aspect-ratio: 1 / 1;
+}
+#log-btn.appears {
+    transform: translateX(0);
+    visibility: visible;
+    opacity: 1;
 }
 
 @media (max-width: 480px) {
