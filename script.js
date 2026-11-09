@@ -1,15 +1,3 @@
-const addBtn = document.getElementById('add-button');
-const curr = document.getElementById('curr');
-const prev = document.getElementById('prev');
-
-addBtn.addEventListener('click', function() {
-    addBtn.classList.toggle('is-clicked');
-    curr.classList.toggle('will-appear');
-    prev.classList.toggle('will-appear');
-    const isExpanded = addBtn.getAttribute('aria-expanded') === 'true';
-    addBtn.setAttribute('aria-expanded', String(!isExpanded));
-});
-
 const navBtn = document.getElementById('nav-btn');
 const navbar = document.getElementById('navbar');
 const overlay = document.getElementById('overlay');
@@ -26,4 +14,19 @@ overlay.addEventListener('click', function () {
     navbar.classList.remove('open');
     navBtn.setAttribute('aria-expanded', 'false');
     document.body.style.overflow = "visible";
+});
+
+const addBtn = document.getElementById('add-button');
+const form = document.getElementById('main-form');
+/*
+const logBtn = document.getElementById('log-btn');
+const amtInput = document.getElementById('amount');
+const category = document.getElementById('category');
+const dateInput = document.getElementById('date');*/
+
+addBtn.addEventListener('click', function() {
+    addBtn.classList.toggle('is-clicked');
+    form.classList.toggle('appears');
+    const isExpanded = addBtn.getAttribute('aria-expanded') === 'true';
+    addBtn.setAttribute('aria-expanded', String(!isExpanded));
 });
