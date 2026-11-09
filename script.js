@@ -31,3 +31,18 @@ addBtn.addEventListener('click', function() {
     const isExpanded = addBtn.getAttribute('aria-expanded') === 'true';
     addBtn.setAttribute('aria-expanded', String(!isExpanded));
 });
+
+logBtn.addEventListener('click', function(event) {
+    if (amtInput.value.trim() === "" || category.value.trim() === "" || dateInput.value.trim() === "") {
+        event.preventDefault();
+        alert("Enter values before Loging the transaction");
+    } else {
+        addBtn.classList.toggle('is-clicked');
+        amtInput.classList.toggle('appears');
+        category.classList.toggle('appears');
+        dateInput.classList.toggle('appears');
+        logBtn.classList.toggle('appears');
+        const isExpanded = addBtn.getAttribute('aria-expanded') === 'true';
+        addBtn.setAttribute('aria-expanded', String(!isExpanded));
+    }
+})
