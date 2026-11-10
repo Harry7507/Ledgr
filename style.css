@@ -169,11 +169,7 @@ ul {
     transform: translateX(-85%);
     opacity: 0;
     visibility: hidden;
-    transition: 
-        max-width var(--button-speed) ease 0.5s,
-        transform var(--button-speed) ease 0.5s,
-        opacity var(--button-speed)ease,
-        visibility var(--button-speed) ease;
+    transition: all var(--button-speed) ease;
 }
 
 #main-form.appears {
