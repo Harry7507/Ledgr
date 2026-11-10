@@ -190,10 +190,6 @@ ul {
     min-width: 0;
 }
 
-.inputs:focus {
-    outline: none;
-}
-
 #amount {
     padding-left: 25px;
     flex: 1.2;
