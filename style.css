@@ -27,7 +27,7 @@ header{
     margin: 15px 20px 0;
 }
 
-#Home {
+#home-link {
     display: flex;
     text-decoration: none;
 }
