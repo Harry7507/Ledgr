@@ -23,21 +23,21 @@ const amtInput = document.getElementById('amount');
 const category = document.getElementById('category');
 const dateInput = document.getElementById('date');
 
-addBtn.addEventListener('click', function() {
+function toggleForm() {
     addBtn.classList.toggle('is-clicked');
     mainForm.classList.toggle('appears');
     const isExpanded = addBtn.getAttribute('aria-expanded') === 'true';
     addBtn.setAttribute('aria-expanded', String(!isExpanded));
+}
+
+addBtn.addEventListener('click', function() {
+    toggleForm();
 });
 
 logBtn.addEventListener('click', function(event) {
     if (amtInput.value.trim() === "" || category.value.trim() === "" || dateInput.value.trim() === "") {
         event.preventDefault();
-        alert("Enter values before Loging the transaction");
     } else {
-        addBtn.classList.toggle('is-clicked');
-        mainForm.classList.toggle('appears');
-        const isExpanded = addBtn.getAttribute('aria-expanded') === 'true';
-        addBtn.setAttribute('aria-expanded', String(!isExpanded));
+        toggleForm();
     }
 })
