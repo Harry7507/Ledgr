@@ -147,16 +147,11 @@ ul {
 #add-button svg { stroke: var(--darker-color); }
 
 #add-button:hover {
-    box-shadow: 0 0 18px rgba(173, 255, 47, 0.45);
-}
-
-#add-button:focus-visible {
-    outline: 2px solid var(--tertiary-color);
-    outline-offset: 3px;
+    box-shadow: 0 0 25px rgba(173, 255, 47, 0.45);
 }
 
 #add-button.is-clicked {
-    transform: rotate(225deg);
+    transform: rotate(315deg);
 }
 
 #main-form {
@@ -166,7 +161,7 @@ ul {
     max-width: 80px;
     flex: 1;
     min-width: 0;
-    transform: translateX(-85%);
+    transform: translateX(-125%);
     opacity: 0;
     visibility: hidden;
     transition: all var(--button-speed) ease;
@@ -231,11 +226,18 @@ ul {
         height: 30px;
     }
     #tagline {
-        font-size: 1.75rem;
+        font-size: 1.5rem;
     }
     #add-button svg {
         height: 20px;
         width: 20px;
+    }
+    .inputs {
+        font-size: 0.3rem;
+    }
+    #amount, #category, #date {
+        padding-left: 7px;
+        flex: 1;
     }
 }
 
@@ -290,6 +292,9 @@ ul {
     #input-area {
         width: 80vw;
         margin: 8vh auto 12vh;
+    }
+    .inputs {
+        font-size: 1rem;
     }
     #container {
         grid-template-columns: 1fr 1fr;
