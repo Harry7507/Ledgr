@@ -205,42 +205,6 @@ ul {
     aspect-ratio: 1 / 1;
 }
 
-@media (max-width: 480px) {
-    header {
-        margin: 10px 10px 0;
-    }
-    .logo {
-        font-size: 3rem;
-    }
-    .nav-link {
-        font-size: 1rem;
-    }
-    #burger-img {
-        height: 25px;
-    }
-    #input-area {
-        width: 80vw;
-        margin: 4vh auto 8vh;
-    }
-    #inputbox {
-        height: 30px;
-    }
-    #tagline {
-        font-size: 1.5rem;
-    }
-    #add-button svg {
-        height: 20px;
-        width: 20px;
-    }
-    .inputs {
-        font-size: 0.3rem;
-    }
-    #amount, #category, #date {
-        padding-left: 7px;
-        flex: 1;
-    }
-}
-
 #container {
     display: grid;
     min-height: 70vh;
@@ -253,6 +217,16 @@ ul {
     "box1 box4 box5 box7"
     "box2 box4 box5 box7"
     "box3 box6 box6 box7";
+}
+
+.box {
+    border-radius: 10px;
+    background-color: var(--lighter-color);
+    transition: all 0.5s ease;
+}
+
+.box:hover {
+    transform: scale(1.02);
 }
 
 @media (max-width: 768px) {
@@ -309,12 +283,41 @@ ul {
     }
 }
 
-.box {
-    border-radius: 10px;
-    background-color: var(--lighter-color);
-    transition: all 0.5s ease;
-}
-
-.box:hover {
-    transform: scale(1.02);
+@media (max-width: 480px) {
+    header {
+        margin: 10px 10px 0;
+    }
+    .logo {
+        font-size: 3rem;
+    }
+    .nav-link {
+        font-size: 1rem;
+    }
+    #burger-img {
+        height: 25px;
+    }
+    #input-area {
+        width: 80vw;
+        margin: 4vh auto 8vh;
+    }
+    #inputbox {
+        height: 30px;
+    }
+    #tagline {
+        font-size: 1.5rem;
+    }
+    #add-button svg {
+        height: 20px;
+        width: 20px;
+    }
+    .inputs {
+        font-size: 0.4rem;
+    }
+    #amount, #category, #date {
+        padding-left: 5px;
+        flex: 1;
+    }
+    #log-btn {
+        padding-left: 7px;
+    }
 }
