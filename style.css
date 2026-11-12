@@ -111,6 +111,8 @@ ul {
     font-family: 'Montserrat', sans-serif;
     color: var(--lighter-color);
     font-size: 3rem;
+    margin: 0;
+    font-weight: 400;
 }
 
 #inputbox {
