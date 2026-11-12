@@ -35,9 +35,7 @@ addBtn.addEventListener('click', function() {
 });
 
 logBtn.addEventListener('click', function(event) {
-    if (amtInput.value.trim() === "" || category.value.trim() === "" || dateInput.value.trim() === "") {
-        event.preventDefault();
-    } else {
+    if (amtInput.value.trim() != "" || category.value.trim() != "" || dateInput.value.trim() != "") {
         toggleForm();
     }
 })

@@ -201,6 +201,7 @@ ul {
 }
 
 #log-btn {
+    cursor: pointer;
     height: 100%;
     aspect-ratio: 1 / 1;
 }
