@@ -7,6 +7,7 @@ navBtn.addEventListener('click', function() {
     overlay.classList.add('show');
     navBtn.setAttribute('aria-expanded', 'true');
     document.body.style.overflow = "hidden";
+    navbar.focus();
 });
 
 overlay.addEventListener('click', function () {
