@@ -279,9 +279,24 @@ ul {
 }
 
 .box {
+    position: relative;
     border-radius: 10px;
     background-color: rgb(0, 0, 0, 0.2);
-    transition: all 0.5s ease;
+    transition: transform 0.5s ease;
+}
+
+.box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 10px;
+    background: radial-gradient(var(--secondary-color), var(--tertiary-color));
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.box:hover::before {
+    opacity: 1;
 }
 
 .box:hover {
