@@ -295,6 +295,15 @@ ul {
     transition: opacity 0.5s ease;
 }
 
+.box::after {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    border-radius: 10px;
+    background-color: rgb(50, 50, 50);
+
+}
+
 .box:hover::before {
     opacity: 1;
 }
