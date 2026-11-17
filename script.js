@@ -24,13 +24,6 @@ const amtInput = document.getElementById('amount');
 const category = document.getElementById('category');
 const dateInput = document.getElementById('date');
 
-const transaction = {
-    id: Date.now(),
-    amount: amtInput.value,
-    category: category.value,
-    date: dateInput.value
-};
-
 function toggleForm() {
     addBtn.classList.toggle('is-clicked');
     mainForm.classList.toggle('appears');
@@ -44,6 +37,14 @@ addBtn.addEventListener('click', function() {
 
 logBtn.addEventListener('click', function(event) {
     if (amtInput.value.trim() != "" || category.value.trim() != "" || dateInput.value.trim() != "") {
-        toggleForm();
+        const transaction = {
+            id: Date.now(),
+            amount: amtInput.value,
+            category: category.value,
+            date: dateInput.value
+        };
+        let list = JSON.parse(localStorage.getItem("transactions")) || [];
+        list.push(transaction);
+        localStorage.setItem("transactions", JSON.stringify(list));
     }
 })
