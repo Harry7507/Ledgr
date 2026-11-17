@@ -37,6 +37,7 @@ addBtn.addEventListener('click', function() {
 
 logBtn.addEventListener('click', function(event) {
     if (amtInput.value.trim() != "" || category.value.trim() != "" || dateInput.value.trim() != "") {
+        event.preventDefault();
         const transaction = {
             id: Date.now(),
             amount: amtInput.value,
@@ -46,5 +47,7 @@ logBtn.addEventListener('click', function(event) {
         let list = JSON.parse(localStorage.getItem("transactions")) || [];
         list.push(transaction);
         localStorage.setItem("transactions", JSON.stringify(list));
+        toggleForm();
+        mainForm.reset();
     }
 })
