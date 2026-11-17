@@ -24,6 +24,13 @@ const amtInput = document.getElementById('amount');
 const category = document.getElementById('category');
 const dateInput = document.getElementById('date');
 
+const transaction = {
+    id: Date.now(),
+    amount: amtInput.value,
+    category: category.value,
+    date: dateInput.value
+};
+
 function toggleForm() {
     addBtn.classList.toggle('is-clicked');
     mainForm.classList.toggle('appears');
