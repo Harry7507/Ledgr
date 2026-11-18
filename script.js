@@ -41,13 +41,15 @@ logBtn.addEventListener('click', function(event) {
         const transaction = {
             id: Date.now(),
             amount: amtInput.value,
-            category: category.value,
+            category: category.value.trim(),
             date: dateInput.value
         };
-        let list = JSON.parse(localStorage.getItem("transactions")) || [];
+        const list = JSON.parse(localStorage.getItem('transactions')) || [];
         list.push(transaction);
-        localStorage.setItem("transactions", JSON.stringify(list));
-        toggleForm();
+        localStorage.setItem('transactions', JSON.stringify(list));
         mainForm.reset();
+        addBtn.classList.remove('is-clicked');
+        mainForm.classList.remove('appears');
+        addBtn.setAttribute('aria-expanded', 'false');
     }
 })
