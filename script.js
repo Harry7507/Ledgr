@@ -1,15 +1,3 @@
-const addBtn = document.getElementById('add-button');
-const curr = document.getElementById('curr');
-const prev = document.getElementById('prev');
-
-addBtn.addEventListener('click', function() {
-    addBtn.classList.toggle('is-clicked');
-    curr.classList.toggle('will-appear');
-    prev.classList.toggle('will-appear');
-    const isExpanded = addBtn.getAttribute('aria-expanded') === 'true';
-    addBtn.setAttribute('aria-expanded', String(!isExpanded));
-});
-
 const navBtn = document.getElementById('nav-btn');
 const navbar = document.getElementById('navbar');
 const overlay = document.getElementById('overlay');
@@ -19,6 +7,7 @@ navBtn.addEventListener('click', function() {
     overlay.classList.add('show');
     navBtn.setAttribute('aria-expanded', 'true');
     document.body.style.overflow = "hidden";
+    navbar.focus();
 });
 
 overlay.addEventListener('click', function () {
@@ -27,3 +16,38 @@ overlay.addEventListener('click', function () {
     navBtn.setAttribute('aria-expanded', 'false');
     document.body.style.overflow = "visible";
 });
+
+const addBtn = document.getElementById('add-button');
+const mainForm = document.getElementById('main-form');
+const logBtn = document.getElementById('log-btn');
+const amtInput = document.getElementById('amount');
+const category = document.getElementById('category');
+const dateInput = document.getElementById('date');
+
+function toggleForm() {
+    addBtn.classList.toggle('is-clicked');
+    mainForm.classList.toggle('appears');
+    const isExpanded = addBtn.getAttribute('aria-expanded') === 'true';
+    addBtn.setAttribute('aria-expanded', String(!isExpanded));
+}
+
+addBtn.addEventListener('click', function() {
+    toggleForm();
+});
+
+logBtn.addEventListener('click', function(event) {
+    if (amtInput.value.trim() != "" || category.value.trim() != "" || dateInput.value.trim() != "") {
+        event.preventDefault();
+        const transaction = {
+            id: Date.now(),
+            amount: amtInput.value,
+            category: category.value,
+            date: dateInput.value
+        };
+        let list = JSON.parse(localStorage.getItem("transactions")) || [];
+        list.push(transaction);
+        localStorage.setItem("transactions", JSON.stringify(list));
+        toggleForm();
+        mainForm.reset();
+    }
+})

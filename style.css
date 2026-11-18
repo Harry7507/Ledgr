@@ -5,8 +5,8 @@
     --lighter-color : darkgrey;
     --darker-color : #151515;
     --input-height: 70px;
-    --input-width: 50vw;
-    --button-speed: 0.7s;
+    --input-width: 60vw;
+    --button-speed: 0.8s;
 }
 
 #box1 { grid-area: box1;}
@@ -27,7 +27,7 @@ header{
     margin: 15px 20px 0;
 }
 
-#Home {
+#home-link {
     display: flex;
     text-decoration: none;
 }
@@ -110,13 +110,16 @@ ul {
     text-align: right;
     font-family: 'Montserrat', sans-serif;
     color: var(--lighter-color);
-    font-size: 2.7rem;
+    font-size: 3rem;
+    margin: 0;
+    font-weight: 400;
 }
 
 #inputbox {
     padding:2.5px;
     height: var(--input-height);
     width: 100%;
+    overflow: hidden;
     border: 2px solid transparent;
     border-radius: 999px;
     display: flex;
@@ -138,6 +141,7 @@ ul {
     aspect-ratio: 1 / 1 ;
     border-radius: 999px;
     border: none;
+    z-index: 5;
     background-color: var(--primary-color);
     transition: transform var(--button-speed) ease, box-shadow 0.3s ease;
 }
@@ -145,72 +149,63 @@ ul {
 #add-button svg { stroke: var(--darker-color); }
 
 #add-button:hover {
-    box-shadow: 0 0 18px rgba(173, 255, 47, 0.45);
-}
-
-#add-button:focus-visible {
-    outline: 2px solid var(--tertiary-color);
-    outline-offset: 3px;
+    box-shadow: 0 0 25px rgba(173, 255, 47, 0.45);
 }
 
 #add-button.is-clicked {
-    transform: rotate(225deg);
+    transform: rotate(315deg);
 }
 
-.options {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.5rem;
-    border: none;
-    cursor: pointer;
-    background-color: var(--lighter-color);
+#main-form {
+    z-index: 4;
+    display: flex;
     height: 100%;
-    width: 70px;
-    border-radius: 999px;
-    transform: translateX(-50px);
+    max-width: 80px;
+    flex: 1;
+    min-width: 0;
+    transform: translateX(-125%);
     opacity: 0;
     visibility: hidden;
     transition: all var(--button-speed) ease;
 }
 
-#curr.will-appear,
-#prev.will-appear {
+#main-form.appears {
+    max-width: 100%;
     transform: translateX(0);
     opacity: 1;
-    width: calc(100% / 2);
     visibility: visible;
 }
 
-@media (max-width: 480px) {
-    header {
-        margin: 10px 10px 0;
-    }
-    .logo {
-        font-size: 3rem;
-    }
-    .nav-link {
-        font-size: 1rem;
-    }
-    #burger-img {
-        height: 25px;
-    }
-    #input-area {
-        width: 80vw;
-        margin: 4vh auto 8vh;
-    }
-    #inputbox {
-        height: 30px;
-    }
-    #tagline {
-        font-size: 1.75rem;
-    }
-    #add-button svg {
-        height: 20px;
-        width: 20px;
-    }
-    .options {
-        font-size: 1rem;
-        width: calc(100% / 2);
-    }
+.inputs {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    padding: 10px;
+    border: none;
+    box-sizing: border-box;
+    border-radius: 999px;
+    height: 100%;
+    min-width: 0;
+}
+
+#amount {
+    padding-left: 25px;
+    flex: 1.2;
+}
+
+#category {
+    padding-left: 25px;
+    flex: 1.8;
+}
+
+#date {
+    padding-left: 25px;
+    flex: 1;
+}
+
+#log-btn {
+    cursor: pointer;
+    height: 100%;
+    aspect-ratio: 1 / 1;
 }
 
 #container {
@@ -225,6 +220,33 @@ ul {
     "box1 box4 box5 box7"
     "box2 box4 box5 box7"
     "box3 box6 box6 box7";
+}
+
+.box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 10px;
+    background: radial-gradient(var(--tertiary-color), var(--secondary-color));
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.box::after {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    border-radius: 10px;
+    background-color: rgb(35, 35, 35);
+
+}
+
+.box:hover::before {
+    opacity: 1;
+}
+
+.box:hover {
+    transform: scale(1.02);
 }
 
 @media (max-width: 768px) {
@@ -265,6 +287,9 @@ ul {
         width: 80vw;
         margin: 8vh auto 12vh;
     }
+    .inputs {
+        font-size: 1rem;
+    }
     #container {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: none;
@@ -278,35 +303,48 @@ ul {
     }
 }
 
-.box {
-    position: relative;
-    border-radius: 10px;
-    transition: transform 0.5s ease;
-}
-
-.box::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: 10px;
-    background: radial-gradient(var(--tertiary-color), var(--secondary-color));
-    opacity: 0;
-    transition: opacity 0.5s ease;
-}
-
-.box::after {
-    content: "";
-    position: absolute;
-    inset: 1px;
-    border-radius: 10px;
-    background-color: rgb(35, 35, 35);
-
-}
-
-.box:hover::before {
-    opacity: 1;
-}
-
-.box:hover {
-    transform: scale(1.02);
+@media (max-width: 480px) {
+    header {
+        margin: 10px 10px 0;
+    }
+    .logo {
+        font-size: 3rem;
+    }
+    .nav-link {
+        font-size: 1rem;
+    }
+    #burger-img {
+        height: 25px;
+    }
+    #input-area {
+        width: 80vw;
+        margin: 4vh auto 8vh;
+    }
+    #inputbox {
+        height: 32px;
+        border: 1px solid transparent;
+        padding: 1px;
+    }
+    #tagline {
+        font-size: 1.5rem;
+    }
+    #add-button svg {
+        height: 20px;
+        width: 20px;
+    }
+    .inputs {
+        font-size: 6px;
+    }
+    #amount, #category, #date {
+        padding-left: 5px;
+        flex: 1;
+    }
+    #log-btn {
+        padding-left: 9px;
+    }
+    .box {
+        position: relative;
+        border-radius: 10px;
+        transition: transform 0.5s ease;
+    }
 }

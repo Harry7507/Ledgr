@@ -12,11 +12,11 @@
 </head>
 <body>
     <header>
-        <a href="index.html" id="Home" aria-label="Ledgr home">
+        <a href="index.html" id="home-link" aria-label="Ledgr home">
             <div id="logo1" class="logo">LED</div>
             <div id="logo2" class="logo">Gr</div>
         </a>
-        <button id="nav-btn" aria-label="Open Menu" aria-expanded="false" aria-controls="navbar">
+        <button id="nav-btn" aria-label="Menu" aria-expanded="false" aria-controls="navbar">
             <img id="burger-img" src="assets/burger-menu.svg" alt="">
         </button>
         <nav id="navbar">
@@ -30,16 +30,28 @@
     <div id="overlay" aria-hidden="true"></div>
     <main>
         <div id="input-area">
-            <div id="tagline">Got a New Transaction?</div>
+            <h1 id="tagline">Got a New Transaction?</h1>
             <div id="inputbox">
-                <button id="add-button" aria-label="Add new transaction button" aria-expanded="false" aria-controls="curr prev">
+                <button id="add-button" aria-label="Open transaction input form" aria-expanded="false" aria-controls="main-form">
                     <svg viewBox="0 0 24 24" width="50" height="50" stroke-width="3.5" fill="none" stroke-linecap="round">
                         <line x1="12" y1="5" x2="12" y2="19"></line>
                         <line x1="5" y1="12" x2="19" y2="12"></line>
                     </svg>
                 </button>
-                <button class="options" id="curr">Current</button>
-                <button class="options" id="prev">Previous</button>
+                <form method="post" id="main-form">
+                    <input type="number" name="amount" id="amount" class="inputs" step="0.01" min="0.01" placeholder="Rs. " required aria-label="Amount Input">
+                    <input type="text" id="category" name="category" list="category-list" placeholder="Search categories..." class="inputs" required aria-label="Category Input">
+                    <datalist id="category-list">
+                        <option value="Food">
+                        <option value="Stationary">
+                        <option value="Upkeep">
+                        <option value="Travel">
+                        <option value="Entertainment">
+                        <option value="Health">
+                    </datalist>
+                    <input type="date" name="date" id="date" class="inputs" required aria-label="Date Input">
+                    <button type="submit" class="inputs" id="log-btn">Add</button>
+                </form>
             </div>
         </div>
         <div id="container">
