@@ -326,20 +326,20 @@ ul {
         height: 25px;
     }
     #input-area {
-        width: 80vw;
+        width: 85vw;
         margin: 4vh auto 8vh;
     }
     #inputbox {
-        height: 32px;
+        height: 42px;
         border: 1px solid transparent;
         padding: 0.8px;
     }
     #tagline {
-        font-size: 1.5rem;
+        font-size: 1.7rem;
     }
     #add-button svg {
-        height: 20px;
-        width: 20px;
+        height: 30px;
+        width: 30px;
     }
     .inputs {
         font-size: 0.6rem;
