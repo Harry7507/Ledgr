@@ -203,6 +203,9 @@ ul {
 }
 
 #log-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     height: 100%;
     aspect-ratio: 1 / 1;
@@ -317,7 +320,7 @@ ul {
         font-size: 3rem;
     }
     .nav-link {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
     #burger-img {
         height: 25px;
@@ -329,7 +332,7 @@ ul {
     #inputbox {
         height: 32px;
         border: 1px solid transparent;
-        padding: 1px;
+        padding: 0.8px;
     }
     #tagline {
         font-size: 1.5rem;
@@ -339,7 +342,7 @@ ul {
         width: 20px;
     }
     .inputs {
-        font-size: 6px;
+        font-size: 0.6rem;
     }
     #amount, #category, #date {
         padding-left: 5px;
