@@ -246,12 +246,36 @@ input[type="number"] {
     transition: transform 0.5s ease;
 }
 
-.box::before {
+#box1::before, 
+#box2::before, 
+#box3::before,
+#box7::before {
     content: "";
     position: absolute;
     inset: 0;
     border-radius: 10px;
-    background: radial-gradient(var(--tertiary-color), var(--secondary-color));
+    background-color: var(--primary-color);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+ 
+#box4::before,
+#box5::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 10px;
+    background-color: var(--secondary-color);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+#box6::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 10px;
+    background-color: var(--tertiary-color);
     opacity: 0;
     transition: opacity 0.5s ease;
 }
@@ -259,12 +283,18 @@ input[type="number"] {
 .box::after {
     content: "";
     position: absolute;
-    inset: 1px;
+    inset: 0.7px;
     border-radius: 10px;
     background-color: rgb(35, 35, 35);
 }
 
-.box:hover::before {
+#box1:hover::before,
+#box2:hover::before,
+#box3:hover::before,
+#box4:hover::before,
+#box5:hover::before,
+#box6:hover::before,
+#box7:hover::before {
     opacity: 1;
 }
 
