@@ -119,7 +119,6 @@ ul {
     padding:2.5px;
     height: var(--input-height);
     width: 100%;
-    overflow: hidden;
     border: 2px solid transparent;
     border-radius: 999px;
     display: flex;
@@ -142,6 +141,7 @@ ul {
     border-radius: 999px;
     border: none;
     z-index: 5;
+    flex-shrink: 0;
     background-color: var(--primary-color);
     transition: transform var(--button-speed) ease, box-shadow 0.3s ease;
 }
@@ -163,6 +163,7 @@ ul {
     max-width: 80px;
     flex: 1;
     min-width: 0;
+    clip-path: inset(0 0 0 65% round 999px);
     transform: translateX(-90%);
     opacity: 0;
     visibility: hidden;
@@ -171,6 +172,7 @@ ul {
 
 #main-form.appears {
     max-width: 100%;
+    clip-path: inset(0 0 0 0 round 999px);
     transform: translateX(0);
     opacity: 1;
     visibility: visible;
