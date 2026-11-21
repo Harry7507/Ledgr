@@ -213,6 +213,7 @@ input[type="number"] {
     padding-left: 25px;
     flex: 1.2;
 }
+#amount::placeholder {color: black;}
 
 #category {
     padding-left: 25px;
