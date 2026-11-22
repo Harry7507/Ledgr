@@ -4,9 +4,9 @@
     --tertiary-color : violet;
     --lighter-color : darkgrey;
     --darker-color : #151515;
-    --input-height: 70px;
+    --input-height: 72px;
     --input-width: 60vw;
-    --button-speed: 0.8s;
+    --button-speed: 1s;
 }
 
 #box1 { grid-area: box1;}
