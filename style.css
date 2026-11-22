@@ -108,6 +108,7 @@ ul {
 
 #sett-btn:hover svg {
     stroke: var(--tertiary-color);
+    color: var(--tertiary-color);
     transform: rotate(120deg);
 }
 
