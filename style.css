@@ -100,8 +100,15 @@ ul {
 #sett-btn svg {
     height: 28px;
     aspect-ratio: 1 / 1;
+    padding: 5px;
     stroke: var(--lighter-color);
     color: var(--primary-color);
+    transition: all 0.5s ease
+}
+
+#sett-btn:hover svg {
+    stroke: var(--tertiary-color);
+    transform: rotate(120deg);
 }
 
 #overlay {
