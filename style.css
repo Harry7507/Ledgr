@@ -100,6 +100,8 @@ ul {
 #sett-btn svg {
     height: 28px;
     aspect-ratio: 1 / 1;
+    stroke: var(--lighter-color);
+    color: var(--primary-color);
 }
 
 #overlay {
