@@ -94,6 +94,7 @@ ul {
     background: transparent;
     border: none;
     margin: 5px 0 0 25px;
+    cursor: pointer;
 }
 
 #sett-btn svg {
