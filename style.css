@@ -120,18 +120,28 @@ ul {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 9;
+    z-index: 10;
     border-radius: 25px;
     border: 1.5px solid var(--primary-color);
-    /*display: none;*/
+    scale: 0;
+    display: none;
+}
+
+#sett-panel.opens {
+    scale: 1;
+    display: block;
 }
 
 #overlay {
     background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
     inset: 0;
-    z-index: 8;
+    z-index: 9;
     display: none;
+}
+
+#overlay.show {
+    display: block;
 }
 
 #input-area {

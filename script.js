@@ -10,9 +10,18 @@ navBtn.addEventListener('click', function() {
     navbar.focus();
 });
 
+const settBtn = document.getElementById('sett-btn');
+const settPanel = document.getElementById('sett-panel');
+
+settBtn.addEventListener('click', function() {
+    settPanel.classList.add('opens');
+    overlay.classList.add('show');
+});
+
 overlay.addEventListener('click', function () {
     overlay.classList.remove('show');
     navbar.classList.remove('open');
+    settPanel.classList.remove('opens');
     navBtn.setAttribute('aria-expanded', 'false');
     document.body.style.overflow = "visible";
 });
