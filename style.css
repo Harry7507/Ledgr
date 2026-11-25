@@ -103,7 +103,7 @@ ul {
     padding: 5px;
     stroke: var(--lighter-color);
     color: var(--primary-color);
-    transition: all 0.5s ease
+    transition: all 0.5s ease;
 }
 
 #sett-btn:hover svg {
@@ -123,13 +123,14 @@ ul {
     z-index: 10;
     border-radius: 25px;
     border: 1.5px solid var(--primary-color);
-    scale: 0;
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
 }
 
 #sett-panel.opens {
-    scale: 1;
-    display: block;
+    opacity: 1;
+    visibility: visible;
 }
 
 #overlay {
@@ -137,11 +138,14 @@ ul {
     position: fixed;
     inset: 0;
     z-index: 9;
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
 }
 
 #overlay.show {
-    display: block;
+    opacity: 1;
+    visibility: visible;
 }
 
 #input-area {
