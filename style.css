@@ -113,6 +113,9 @@ ul {
 }
 
 #sett-panel {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
     position: fixed;
     background-color: #202020;
     height: 72vh;
@@ -123,15 +126,30 @@ ul {
     z-index: 10;
     border-radius: 25px;
     border: 1.5px solid var(--primary-color);
-    box-shadow: 0 0 15px color-mix(in srgb, var(--primary-color) 60%, rgba(0, 0, 0, 0) 40%);
+    box-shadow: 0 0 15px color-mix(in srgb, var(--primary-color) 60%, rgba(0, 0, 0, 0) 40%);/*
     opacity: 0;
-    visibility: hidden;
+    visibility: hidden;*/
     transition: all 0.5s ease;
 }
 
 #sett-panel.opens {
     opacity: 1;
     visibility: visible;
+}
+
+#sett-h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 2rem;
+    color: var(--lighter-color);
+}
+
+#sett-h1::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: inherit;
+    background: linear-gradient(to right, transparent 0%, var(--primary-color) 50%, transparent 100%);
 }
 
 #overlay {
