@@ -404,9 +404,6 @@ input[type="number"] {
         visibility: visible;
         transform: translateX(0);
     }
-    #sett-btn {
-
-    }
     ul {
         flex-direction: column;
         gap: 15px;
