@@ -405,10 +405,11 @@ input[type="number"] {
         transform: translateX(0);
     }
     #sett-panel {
+        height: 68vh;
         width: 65vw;
     }
     #sett-h1 {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
     ul {
         flex-direction: column;
