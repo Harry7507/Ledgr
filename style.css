@@ -404,6 +404,12 @@ input[type="number"] {
         visibility: visible;
         transform: translateX(0);
     }
+    #sett-panel {
+        width: 65vw;
+    }
+    #sett-h1 {
+        font-size: 1.5rem;
+    }
     ul {
         flex-direction: column;
         gap: 15px;

@@ -1,5 +1,7 @@
 const navBtn = document.getElementById('nav-btn');
 const navbar = document.getElementById('navbar');
+const settBtn = document.getElementById('sett-btn');
+const settPanel = document.getElementById('sett-panel');
 const overlay = document.getElementById('overlay');
 
 navBtn.addEventListener('click', function() {
@@ -9,9 +11,6 @@ navBtn.addEventListener('click', function() {
     document.body.style.overflow = "hidden";
     navbar.focus();
 });
-
-const settBtn = document.getElementById('sett-btn');
-const settPanel = document.getElementById('sett-panel');
 
 settBtn.addEventListener('click', function() {
     settPanel.classList.add('opens');
