@@ -452,6 +452,13 @@ input[type="number"] {
     .nav-link {
         font-size: 1.2rem;
     }
+    #sett-panel {
+        height: 60vh;
+        width: 75vw;
+    }
+    #sett-h1 {
+        font-size: 1.2rem;
+    }
     #burger-img {
         height: 25px;
     }
