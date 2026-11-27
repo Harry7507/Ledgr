@@ -152,6 +152,14 @@ ul {
     background: linear-gradient(to right, transparent 0%, var(--primary-color) 50%, transparent 100%);
 }
 
+#sett-text {
+    display: none;
+    color: var(--lighter-color);
+    font-family: 'Montserrat', sans-serif;
+    font-variant: small-caps;
+    margin-left: 8px;
+}
+
 #overlay {
     background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
@@ -404,6 +412,9 @@ input[type="number"] {
         visibility: visible;
         transform: translateX(0);
     }
+    #sett-btn svg {
+        display: none;
+    }
     #sett-panel {
         height: 68vh;
         width: 65vw;
@@ -413,11 +424,15 @@ input[type="number"] {
     }
     ul {
         flex-direction: column;
-        gap: 15px;
+        gap: 22px;
     }
     .nav-link {
         font-size: 1.7rem;
         transition: color 0.5s ease;
+    }
+    #sett-text {
+        display: block;
+        font-size: 1.7rem;
     }
     #nav-btn {
         display: block;
@@ -450,6 +465,9 @@ input[type="number"] {
         font-size: 3rem;
     }
     .nav-link {
+        font-size: 1.2rem;
+    }
+    #sett-text {
         font-size: 1.2rem;
     }
     #sett-panel {
